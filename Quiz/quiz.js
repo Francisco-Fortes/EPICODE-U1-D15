@@ -1,30 +1,30 @@
-let score = 0;
-//To calculate the value of the score score/questions.lenght
-const nodeQuestion = document.getElementById("question");
-// function question() {
-//   for (let i = 0; i < questions.length; i++) {
-//     nodeQuestion.innertext = questions[i].question;
-//     if (response == questions[i]) {
-//     }
-//   }
+// let score = 0;
+// //To calculate the value of the score score/questions.lenght
+// const nodeQuestion = document.getElementById("question");
+// // function question() {
+// //   for (let i = 0; i < questions.length; i++) {
+// //     nodeQuestion.innertext = questions[i].question;
+// //     if (response == questions[i]) {
+// //     }
+// //   }
 
-// for( let i = 0; i<question.length;i++)
+// // for( let i = 0; i<question.length;i++)
 
-//Show the fisrt question only
-//   nodeQuestion.innertext = questions.findIndex(whatever, index);
-//   return whatever.question;
-//   console.log()
-// }
-// const nodeAnswers = document.querySelectorAll(".answers");
-// console.log(nodeAnswers);
-// nodeAnswers.text;
+// //Show the fisrt question only
+// //   nodeQuestion.innertext = questions.findIndex(whatever, index);
+// //   return whatever.question;
+// //   console.log()
+// // }
+// // const nodeAnswers = document.querySelectorAll(".answers");
+// // console.log(nodeAnswers);
+// // nodeAnswers.text;
 
-const answerDisplay1 = document.getElementById("answer1");
-const answerDisplay2 = document.getElementById("answer2");
-const answerDisplay3 = document.getElementById("answer3");
-const answerDisplay4 = document.getElementById("answer4");
-const submitButton = document.getElementById("submit");
-// const answers
+// const answerDisplay1 = document.getElementById("answer1");
+// const answerDisplay2 = document.getElementById("answer2");
+// const answerDisplay3 = document.getElementById("answer3");
+// const answerDisplay4 = document.getElementById("answer4");
+// const submitButton = document.getElementById("submit");
+// // const answers
 
 const questions = [
   {
@@ -140,3 +140,12 @@ window.onload = function () {}
 // If you are presenting all the questions together, just take all the radio buttons and check if the selected answer === correct_answer
 // If you are presenting one question at a time, just add one point or not to the user score if the selected answer === correct_answer
 */
+
+const nodeAnswers = document.getElementById("answer-container");
+const createButtons = function () {
+  for (i = 0; i < 4; i++) {
+    let allButtons = document.createElement("button");
+    nodeAnswers.appendChild(allButtons);
+    allButtons.classList.add("answers-buttons");
+  }
+};

@@ -55,16 +55,26 @@ for (let i = 0; i < 4; i++) {
 console.log(arrayOfArrays);
 // 29) Create a function that gets 2 arrays as parameters and returns the longest one
 //WIP
-const longestOne = function (array1, array2) {};
+// let array1 = [hos, sfsf];
+// let array2 = [dsdsd, dsdsd];
+// const longestOne = function (array1, array2) {
+//   if (array1.length > array2.length) {
+//     // return array1;
+//   }
+//   if (array1.length < array2.length) {
+//     // return array2;
+//   } else {
+//     console.log("Sorry, arrays are the same");
+//   }
+// };
 // 30) Create a function that gets 2 arrays of numbers as parameters and returns the one with the higher sum of values
-//WIP
-const highestSum = function (array1, array2) {};
+// const highestSum = function (array1, array2) {};
 
 // DOM EXERCISES
 // 31) Get the element with an id of "container" from the page
 const nodeContainer = document.getElementById("container");
 // 32) Get every <td> element from the page
-const nodeTd = document.querySelectorAll("td");
+const nodeTd = document.get("td");
 console.log(nodeTd);
 // 33) Use a loop for printing the text inside of every <td> element in the page
 const everyTd = function (input) {
@@ -74,7 +84,7 @@ const everyTd = function (input) {
 };
 // 34) Write a function to change the heading of the page
 const nodeH1 = document.querySelector(".h1");
-// WIP: I could not make it work using only ("h1") and querySelectorAll 
+// WIP: I could not make it work using only ("h1") and querySelectorAll
 const changeHeading = function (input) {
   nodeH1.innerText = input;
 };
@@ -86,41 +96,41 @@ const extraRow = function () {
   nodeTable.appendChild(row);
 };
 // 36) Write a function to add a class of "test" to each row in the table
-const nodeTr = document.querySelectorAll("tr")
-const addTestClass = function() {
-    for (let i =1; i<nodeTr.length; i++) {
-        nodeTr[i].classList.add("test")
-    }
-}
-// 37) Write a function to add a red background to every link in the page
-const nodeLinks = querySelectorAll("a")
-const redBcLink = function () {
-for (i = 0; i < nodeLinks.Length; i++) {
-    nodeLinks[i].style.backgroundColor = red; 
-
+const nodeTr = document.getElementsByTagName("tr");
+const addTestClass = function () {
+  for (let i = 1; i < nodeTr.length; i++) {
+    nodeTr[i].classList.add("test");
   }
-}
+};
+// 37) Write a function to add a red background to every link in the page
+const nodeLinks = querySelectorAll("a");
+const redBcLink = function () {
+  for (i = 0; i < nodeLinks.Length; i++) {
+    nodeLinks[i].style.backgroundColor = red;
+  }
+};
 // 38) Console log "Page loaded" when the page is correctly loaded
-window.onload = function() {
-    console.log("Page loaded")
-} 
+window.onload = function () {
+  console.log("Page loaded");
+};
 // 39) Write a function to add new items to a unordered list
 const nodeUl = document.getElementById("ul1");
-      const newLi = function () {
-        const nodeLi = document.createElement("li");
-        nodeUl.appendChild(nodeLi);
-        nodeLi.innerText = newLi;
-    
-// 40) Write a function to empty a list
-//WIP: 
-// const allLis = document.querySelectorAll("li")
+const newLi = function () {
+  const nodeLi = document.createElement("li");
+  nodeUl.appendChild(nodeLi);
+  nodeLi.innerText = newLi;
+};
+
+// // 40) Write a function to empty a list
+// //WIP:
+// // const allLis = document.querySelectorAll("li")
+// // const removeAllLis = function () {
+// //     for ( let i = 1; i< allLis.length; i++) {
+// //         allLis.shift()
+// //     }
+// const nodeLists = document.querySelector(".lists");
 // const removeAllLis = function () {
-//     for ( let i = 1; i< allLis.length; i++) {
-//         allLis.shift()
+//     for (i = 0; i < nodeLists.Length; i++) {
+//       nodeLists.removeChild(nodeLists[i]);
 //     }
-const nodeLists = document.querySelector(".lists");
-const removeAllLis = function () {
-    for (i = 0; i < nodeLists.Length; i++) {
-      nodeLists.removeChild(nodeLists[i]);
-    }
-  }
+//   }

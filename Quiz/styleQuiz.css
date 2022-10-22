@@ -1,0 +1,14 @@
+#frame {
+  background-color: blue;
+}
+#question {
+  color: red;
+}
+
+.answers-buttons {
+  width: 200px;
+  height: 50px;
+  color: red;
+  background-color: bisque;
+  margin-bottom: 100px;
+}

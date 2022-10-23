@@ -143,9 +143,33 @@ window.onload = function () {}
 
 const nodeAnswers = document.getElementById("answer-container");
 const createButtons = function () {
-  for (i = 0; i < 4; i++) {
+  //if it is true or false only needs to create two buttons
+  for (i = 0; i < arrayOfMergedAnswers.length; i++) {
     let allButtons = document.createElement("button");
     nodeAnswers.appendChild(allButtons);
     allButtons.classList.add("answers-buttons");
+    allButtons.innerText = arrayOfMergedAnswers[i];
   }
 };
+
+//Generating a random number
+let randomNumber = Math.floor(Math.random() * questions.lenght);
+
+//Mixing correct and incorrect answers in one array
+let arrayOfMergedAnswers = [];
+const mergeAnswers = function () {
+  for (i = 0; i < incorrect_answers.length; i++) {
+    arrayOfMergedAnswers.push(questions.incorrect_answer);
+  }
+  arrayOfMergedAnswers.push(questions.correct_answers);
+};
+
+// Anadir eventListener a cada boton y saber que respondio
+//Comparar con if statement
+//if {(selectedAnswer === correct_answer)score++} else {console.log("wrong answer")}
+const isTheAnswerCorrect = function (event) {
+  let selectedAnswer = event.target;
+  if (selectedAnswer === )
+};
+//Aplicar clase a cada boton when selected y quitarla cuando seleccionas otra
+//
